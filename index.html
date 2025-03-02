@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn with AI</title>
+    <style>
+        /* Reset e stile base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fff;
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            padding: 40px 0 20px;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        /* Tema scuro/chiaro toggle */
+        .theme-toggle {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        
+        .toggle {
+            position: relative;
+            display: inline-block;
+            width: 50px;
+            height: 24px;
+        }
+        
+        .toggle input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+        
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 24px;
+        }
+        
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+        
+        input:checked + .slider {
+            background-color: #333;
+        }
+        
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+        
+        /* Contenuto principale */
+        .intro {
+            margin-bottom: 50px;
+            font-size: 1.1rem;
+        }
+        
+        .intro p {
+            margin-bottom: 20px;
+        }
+        
+        /* Sezioni */
+        section {
+            margin-bottom: 50px;
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        
+        /* Lista articoli */
+        ul {
+            list-style-type: none;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 15px;
+            position: relative;
+        }
+        
+        li:before {
+            content: "•";
+            position: absolute;
+            left: -20px;
+        }
+        
+        a {
+            color: #333;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            transition: color 0.3s;
+        }
+        
+        a:hover {
+            color: #666;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: 80px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        /* Modalità scura */
+        body.dark-mode {
+            background-color: #1a1a1a;
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode a {
+            color: #f5f5f5;
+        }
+        
+        body.dark-mode a:hover {
+            color: #ccc;
+        }
+        
+        body.dark-mode footer {
+            border-top: 1px solid #333;
+            color: #ccc;
+        }
+        
+        /* Responsività */
+        @media (max-width: 768px) {
+            body {
+                padding: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="theme-toggle">
+        <label class="toggle">
+            <input type="checkbox" id="theme-switch">
+            <span class="slider"></span>
+        </label>
+    </div>
+    
+    <header>
+        <h1>Learn with AI</h1>
+    </header>
+    
+    <main>
+        <section class="intro">
+            <p>
+                Learn with AI è un blog dedicato all'esplorazione di come gli strumenti di intelligenza artificiale possono essere utilizzati per apprendere in modo più efficace e veloce.
+            </p>
+            <p>
+                Qui condivido strategie, tecniche e risorse per sfruttare al meglio le potenzialità dell'AI nell'apprendimento e nell'istruzione, rendendo accessibili conoscenze complesse e accelerando il processo di acquisizione delle competenze.
+            </p>
+        </section>
+        
+        <section>
+            <h2>Articoli recenti</h2>
+            <ul>
+                <li><a href="#">Come utilizzare ChatGPT per imparare una nuova lingua</a></li>
+                <li><a href="#">Gli strumenti AI per la comprensione di concetti matematici complessi</a></li>
+                <li><a href="#">Apprendimento personalizzato: come l'AI adatta i contenuti alle tue esigenze</a></li>
+                <li><a href="#">Le migliori app basate su AI per studiare più efficientemente</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Guide e tutorial</h2>
+            <ul>
+                <li><a href="#">Come creare un programma di studio personalizzato con l'aiuto dell'AI</a></li>
+                <li><a href="#">Tutorial: utilizzare modelli AI per semplificare testi accademici complessi</a></li>
+                <li><a href="#">Guida pratica all'uso di Claude per ricerche approfondite</a></li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>Prospettive</h2>
+            <ul>
+                <li><a href="#">Il futuro dell'educazione nell'era dell'intelligenza artificiale</a></li>
+                <li><a href="#">Limiti e potenzialità dell'AI come strumento didattico</a></li>
+                <li><a href="#">Equilibrio tra apprendimento tradizionale e assistito dall'AI</a></li>
+            </ul>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Learn with AI. Tutti i diritti riservati.</p>
+    </footer>
+    
+    <script>
+        // Toggle tema chiaro/scuro
+        const themeSwitch = document.getElementById('theme-switch');
+        
+        // Controlla se c'è una preferenza salvata
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+            themeSwitch.checked = true;
+        }
+        
+        themeSwitch.addEventListener('change', function() {
+            if (this.checked) {
+                document.body.classList.add('dark-mode');
+                localStorage.setItem('darkMode', 'enabled');
+            } else {
+                document.body.classList.remove('dark-mode');
+                localStorage.setItem('darkMode', null);
+            }
+        });
+    </script>
+</body>
+</html>
